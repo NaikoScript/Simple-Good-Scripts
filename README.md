@@ -1,13 +1,11 @@
-# Simple-Good-Scripts
+## Simple-Good-Scripts
 Here are some simple but good scripts for diffrent games
-## Gun Grounds
-<p align="center">
-  <img src="https://tr.rbxcdn.com/180DAY-83019111e847f02168cfbe0bb4bfc4d6/768/432/Image/Webp/noFilter" height="255" />
-</p>
+# [Gun Grounds](https://www.roblox.com/games/12137249458) Rapid Fire
 
-```
-https://www.roblox.com/games/12137249458
-```
+  <img src="https://tr.rbxcdn.com/180DAY-83019111e847f02168cfbe0bb4bfc4d6/768/432/Image/Webp/noFilter" height="300" />
+
+
+## Shortened Script
 ```lua
 _G.Configuration = {
     ["FireRate"] = 0.002,
