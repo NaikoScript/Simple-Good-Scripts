@@ -19,3 +19,13 @@ _G.Configuration = {
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/GunGrounds"))()
 ```
+# [Murder Time](https://www.roblox.com/games/15621061275) Bunny Crate Autofarm
+
+  <img src="https://github.com/user-attachments/assets/80be526e-1cc5-4320-b51c-6490fd1e2969" height="300" />
+
+## Shortened Script
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/MurderTime"))()
+```
+
+
