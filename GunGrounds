@@ -1,0 +1,26 @@
+-- Script Made by Naiko Exploits --
+
+_G.Configuration = _G.Configuration or {
+    ["FireRate"] = 0.002,
+    ["reloadTime"] = 0,
+    ["DamageDropoff"] = 800,
+    ["isAuto"] = true,
+    ["Ammo"] = nil,
+    ["PelletAmount"] = nil,
+    ["spread"] = nil,
+    ["Recoil"] = Vector3.new(0,0,0)
+}
+
+game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
+    char.ChildAdded:Connect(function(v)
+    if v:IsA("Tool") then
+        for i,v2 in _G.Configuration do
+            task.spawn(function()
+                if v.Configuration:FindFirstChild(i) and v2 ~= nil then
+                    v.Configuration[i].Value = v2
+                end
+            end)
+        end
+    end
+    end)
+end)
