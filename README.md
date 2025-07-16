@@ -27,5 +27,20 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Go
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/MurderTime"))()
 ```
+# [Free Draw](https://www.roblox.com/games/1547610457) Server Crasher/Auto paint
 
+  <img src="https://tr.rbxcdn.com/180DAY-c9438381bc2b43d7d88aa9efc55ca192/768/432/Image/Webp/noFilter" height="300" />
+
+## Shortened Script
+```lua
+_G.Settings = {
+    SpamAmount = 40000, -- Amount of lines to spam
+    Radius = 100, -- Max radius of the random positions
+    Color = Color3.new(1,1,1), -- Color of the lines
+    Transparency = 0.9999, -- Transparency of the lines
+    Thickness = 0.05, -- Thickness of the lines
+    AntiLag = true -- It will delete all your art to prevent from lag
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/FreeDraw"))()
+```
 
