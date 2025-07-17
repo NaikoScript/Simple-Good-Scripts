@@ -35,7 +35,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Go
 ```
 # [Free Draw](https://www.roblox.com/games/1547610457) Server Crasher/Auto paint
 
-  <img src="https://tr.rbxcdn.com/180DAY-c9438381bc2b43d7d88aa9efc55ca192/768/432/Image/Webp/noFilter" height="300" />
+  <img src="https://github.com/user-attachments/assets/a2d0d31d-4b1e-4a09-bce1-a45cab5547c6" height="300" />
 
 ## Shortened Script
 ```lua
