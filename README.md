@@ -13,7 +13,7 @@ Here are some simple but good scripts for diffrent games
 
 ## Shortened Script
 ```lua
-local Configuration ={
+local Configuration = {
     ["FireRate"] = 0.002, 
     ["InfiniteAmmo"] = true, 
     ["RemoveSimpleAntiCheat"] = true,
