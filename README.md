@@ -13,15 +13,11 @@ Here are some simple but good scripts for diffrent games
 
 ## Shortened Script
 ```lua
-local Configuration = {
-    ["FireRate"] = 0.002,
-    ["reloadTime"] = 0,
-    ["DamageDropoff"] = 800,
+local Configuration ={
+    ["FireRate"] = 0.002, 
+    ["InfiniteAmmo"] = true, 
+    ["RemoveSimpleAntiCheat"] = true,
     ["isAuto"] = true,
-    ["Ammo"] = nil,
-    ["PelletAmount"] = nil,
-    ["spread"] = nil,
-    ["Recoil"] = Vector3.new(0,0,0)
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/GunGrounds"))(Configuration)
 ```
