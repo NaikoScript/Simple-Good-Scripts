@@ -39,7 +39,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Go
 
 ## Shortened Script
 ```lua
-_G.Settings = {
+local Settings = {
     SpamAmount = 40000, -- Amount of lines to spam
     Radius = 100, -- Max radius of the random positions
     Color = Color3.new(1,1,1), -- Color of the lines
@@ -47,6 +47,6 @@ _G.Settings = {
     Thickness = 0.05, -- Thickness of the lines
     AntiLag = true -- It will delete all your art to prevent from lag
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/FreeDraw"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/FreeDraw"))(Settings)
 ```
 
