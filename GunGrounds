@@ -1,26 +1,62 @@
 -- Script Made by Naiko Exploits --
 
-_G.Configuration = _G.Configuration or {
-    ["FireRate"] = 0.002,
-    ["reloadTime"] = 0,
-    ["DamageDropoff"] = 800,
+local Configuration = (...) or {
+    ["FireRate"] = 0.002, 
+    ["InfiniteAmmo"] = true, 
+    ["RemoveSimpleAntiCheat"] = true,
     ["isAuto"] = true,
-    ["Ammo"] = nil,
-    ["PelletAmount"] = nil,
-    ["spread"] = nil,
     ["Recoil"] = Vector3.new(0,0,0)
 }
 
-game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
-    char.ChildAdded:Connect(function(v)
-    if v:IsA("Tool") then
-        for i,v2 in _G.Configuration do
-            task.spawn(function()
-                if v.Configuration:FindFirstChild(i) and v2 ~= nil then
-                    v.Configuration[i].Value = v2
-                end
-            end)
+if Configuration["RemoveSimpleAntiCheat"] ~= nil and Configuration["RemoveSimpleAntiCheat"] then
+    for i,v in game.ReplicatedFirst:GetChildren() do
+        if v:IsA("LocalScript") and #v:GetChildren() == 0 then
+            v:Destroy()
+        end
+    end
+end
+
+
+if Configuration["InfiniteAmmo"] ~= nil and Configuration["InfiniteAmmo"] and type(getnilinstances) == "function" then
+    task.spawn(function()
+    while task.wait(0.15) do
+        for i,v in getnilinstances() do
+            if v:IsA("NumberValue") and v.Value > 0 then
+                v.Value = 6e9
+            end
         end
     end
     end)
+else
+    warn("Failed to apply InfiniteAmmo, getnilinstances is not a function")
+end
+
+local function ConfigurationApplyCharacter(char)
+    for i,v in char:GetChildren() do
+        if v:IsA("Tool") then
+            for i,v2 in Configuration do
+                task.spawn(function()
+                    if v.Configuration:FindFirstChild(i) and v2 ~= nil then
+                        v.Configuration[i].Value = v2
+                    end
+                end)
+            end
+            if v:FindFirstChildOfClass("LocalScript") then
+                local LocalScript = v:FindFirstChildOfClass("LocalScript")
+                LocalScript.Disabled = true
+                task.wait()
+                LocalScript.Disabled = false
+            end
+        end
+    end
+end
+if game.Players.LocalPlayer.Character then
+    ConfigurationApplyCharacter(game.Players.LocalPlayer.Character)
+end
+
+game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
+    repeat
+        task.wait(0.03)
+    until char:FindFirstChildOfClass("Tool")
+    ConfigurationApplyCharacter(char)
 end)

@@ -13,7 +13,7 @@ Here are some simple but good scripts for diffrent games
 
 ## Shortened Script
 ```lua
-_G.Configuration = {
+local Configuration = {
     ["FireRate"] = 0.002,
     ["reloadTime"] = 0,
     ["DamageDropoff"] = 800,
@@ -23,7 +23,7 @@ _G.Configuration = {
     ["spread"] = nil,
     ["Recoil"] = Vector3.new(0,0,0)
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/GunGrounds"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/GunGrounds"))(Configuration)
 ```
 # [Murder Time](https://www.roblox.com/games/15621061275) Bunny Crate Autofarm
 
