@@ -26,7 +26,7 @@ if Configuration["InfiniteAmmo"] ~= nil and Configuration["InfiniteAmmo"] and ty
         end
     end
     end)
-elseif Configuration["InfiniteAmmo"] ~= nil and Configuration["InfiniteAmmo"] and not type(getnilinstances) == "function" then
+elseif Configuration["InfiniteAmmo"] ~= nil and Configuration["InfiniteAmmo"] and type(getnilinstances) ~= "function" then
     warn("Failed to apply InfiniteAmmo, getnilinstances function is missing, Please use a better executor.")
     game.StarterGui:SetCore("SendNotification",
     {Title = "Error",
