@@ -6,7 +6,7 @@ end
 
 -- Settings you can change --
 
-local Settings = type(...) == "table" and (...) or {
+local Settings = type((...)) == type({}) and (...) or {
     SpamAmount = 40000, -- Amount of lines to spam
     Radius = 100, -- Max radius of the random positions
     Color = Color3.new(1,1,1), -- Color of the lines
