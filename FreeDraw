@@ -167,6 +167,6 @@ end
 CreateLineEvent:FireServer(RandomKey, RemoteArgumentData)
 
 if (...) == nil then
-    task.wait(7)
+    task.wait(10)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/FreeDraw"))()
 end
