@@ -6,7 +6,7 @@ end
 
 -- Settings you can change --
 
-local Settings = (...) or {
+local Settings = type(...) == "table" and (...) or {
     SpamAmount = 40000, -- Amount of lines to spam
     Radius = 100, -- Max radius of the random positions
     Color = Color3.new(1,1,1), -- Color of the lines
@@ -154,7 +154,6 @@ local RemoteArgumentData = {
                 ["thickness"] = math.clamp(Settings.Thickness, 0.05, 2),
                 ["transparency"] = math.clamp(Settings.Transparency, 0, 0.999),
                 ["color"] = Settings.Color,
-            
         },
     [3] =  CreateRandomPos(math.clamp(Settings.SpamAmount,1,1500000),Settings.Radius)
     }
@@ -166,3 +165,8 @@ if Settings.AntiLag then
 end
 
 CreateLineEvent:FireServer(RandomKey, RemoteArgumentData)
+
+if (...) == nil then
+    task.wait(7)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/FreeDraw"))()
+end
