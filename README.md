@@ -36,10 +36,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Go
 ## Shortened Script
 ```lua
 local Settings = {
-    SpamAmount = 40000, -- Amount of lines to spam
-    Radius = 100, -- Max radius of the random positions
+    SpamAmount = 222000, -- Amount of lines to spam
     Color = Color3.new(1,1,1), -- Color of the lines
-    Transparency = 0.9999, -- Transparency of the lines
+    Transparency = 1, -- Transparency of the lines
     Thickness = 0.05, -- Thickness of the lines
     AntiLag = true -- It will delete all your art to prevent from lag
 }
