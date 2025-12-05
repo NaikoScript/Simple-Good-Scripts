@@ -29,9 +29,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Go
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/MurderTime"))()
 ```
-# [Free Draw](https://www.roblox.com/games/1547610457) Server Crasher/Auto paint
+# [Free Draw](https://www.roblox.com/games/1547610457) Server Crasher/Spam Draw
 
-  <img src="https://github.com/user-attachments/assets/a2d0d31d-4b1e-4a09-bce1-a45cab5547c6" height="300" />
+  <img src="https://github.com/user-attachments/assets/6432aa54-71e9-4022-87e1-f3c23812d04a" height="300" />
 
 ## Shortened Script
 ```lua
