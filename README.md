@@ -17,6 +17,7 @@ local Configuration = {
     ["FireRate"] = 0.002, 
     ["InfiniteAmmo"] = true, 
     ["RemoveSimpleAntiCheat"] = true,
+    ["NoRecoil"] = true,
     ["isAuto"] = true,
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NaikoScript/Simple-Good-Scripts/main/GunGrounds"))(Configuration)

@@ -1,9 +1,12 @@
 -- Script Made by Naiko Exploits --
 
+local LocalPlayer = game.Players.LocalPlayer
+
 local Configuration = (...) or {
     ["FireRate"] = 0.002, 
     ["InfiniteAmmo"] = true, 
     ["RemoveSimpleAntiCheat"] = true,
+    ["NoRecoil"] = true,
     ["isAuto"] = true,
 }
 
@@ -15,16 +18,33 @@ if Configuration["RemoveSimpleAntiCheat"] ~= nil and Configuration["RemoveSimple
     end
 end
 
+if Configuration["NoRecoil"] ~= nil and Configuration["NoRecoil"] then
+    workspace.CurrentCamera:remove()
+	task.wait(0.1)
+	repeat task.wait() until LocalPlayer.Character ~= nil
+	workspace.CurrentCamera.CameraSubject = LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid")
+	workspace.CurrentCamera.CameraType = "Custom"
+    if LocalPlayer.PlayerGui:FindFirstChild("Field of ViewControl",true) then
+        local FOVControl = LocalPlayer.PlayerGui:FindFirstChild("Field of ViewControl",true)
+        local TextBox = FOVControl:FindFirstChild("TextBox")
+        if TextBox then
+            workspace.CurrentCamera.FieldOfView = tonumber(TextBox.Text) or 90
+            TextBox:GetPropertyChangedSignal("Text"):Connect(function()
+                workspace.CurrentCamera.FieldOfView = tonumber(TextBox.Text) or 90
+            end)
+        end
+    end
+end
 
 if Configuration["InfiniteAmmo"] ~= nil and Configuration["InfiniteAmmo"] and type(getnilinstances) == "function" then
     task.spawn(function()
-    while task.wait(0.15) do
-        for i,v in getnilinstances() do
-            if v:IsA("NumberValue") and v.Value > 0 then
-                v.Value = 6e9
+        while task.wait(0.15) do
+            for i,v in getnilinstances() do
+                if v:IsA("NumberValue") and v.Value > 0 then
+                    v.Value = 6e9
+                end
             end
         end
-    end
     end)
 elseif Configuration["InfiniteAmmo"] ~= nil and Configuration["InfiniteAmmo"] and type(getnilinstances) ~= "function" then
     warn("Failed to apply InfiniteAmmo, getnilinstances function is missing, Please use a better executor.")
